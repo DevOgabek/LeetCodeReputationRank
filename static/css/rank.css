@@ -13,17 +13,31 @@
     padding: 15px;
     transition: background-color 0.3s;
 }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .rank-item {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
     padding: 15px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, opacity 0.3s, transform 0.3s;
     cursor: pointer;
+    animation: fadeIn 0.5s ease-out;
 }
+
 .rank-item:hover {
     background-color: #eee;
 }
+
 .rank {
     font-size: 1.5em;
     font-weight: bold;
@@ -95,4 +109,9 @@
 }
 .me {
     background-color: rgb(203, 214, 236);
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 800px;
 }

@@ -1,53 +1,101 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Ranking Page</title>
-		<link rel="stylesheet" href="{% static "css/rank.css" %}">
-	</head>
-	<body>
-		<section class="ranking">
-			<div class="rank-item-th">
-				<div class="profile-container">
-					<div class="details">
-						<span class="name-th">Username</span>
-						<span class="reputation-th">Reputation</span>
-					</div>
-				</div>
-				<span class="rank-th">Rank</span>
-			</div>
-			{% for profile in profiles %}
-			<a href="https://leetcode.com/{{ profile.username }}">
-				{% if profile.rank == 1 %}
-				<div class="rank-item top-1">
-					{% elif profile.rank == 2 %}
-					<div class="rank-item top-2">
-						{% elif profile.rank == 3 %}
-						<div class="rank-item top-3">
-							{% elif profile.username == "DevOgabek" %}
-							<div class="rank-item me">
-								{% else %}
-								<div class="rank-item">
-									{% endif %}
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ranking Page</title>
+        <link rel="stylesheet" href="{% static "css/rank.css" %}">
+    </head>
+    <body>
+        <section class="ranking">
+            <div class="rank-item-th">
+                <div class="profile-container">
+                    <div class="details">
+                        <span class="name-th">Username</span>
+                        <span class="reputation-th">Reputation</span>
+                    </div>
+                </div>
+                <span class="rank-th">Rank</span>
+            </div>
+            {% for profile in profiles %}
+            <a href="https://leetcode.com/{{ profile.username }}">
+                {% if profile.rank == 1 %}
+                <div class="rank-item top-1">
+                    <div class="profile-container">
+                        <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                        <div class="details">
+                            <span class="name">{{ profile.username }}</span>
+                            <span class="reputation">{{ profile.reputation_count }}</span>
+                        </div>
+                    </div>
+                    <span class="rank">{{ profile.rank }}</span>
+                </div>
+                {% elif profile.rank == 2 %}
+                <div class="rank-item top-2">
+                    <div class="profile-container">
+                        <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                        <div class="details">
+                            <span class="name">{{ profile.username }}</span>
+                            <span class="reputation">{{ profile.reputation_count }}</span>
+                        </div>
+                    </div>
+                    <span class="rank">{{ profile.rank }}</span>
+                </div>
+                {% elif profile.rank == 3 %}
+                <div class="rank-item top-3">
+                    <div class="profile-container">
+                        <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                        <div class="details">
+                            <span class="name">{{ profile.username }}</span>
+                            <span class="reputation">{{ profile.reputation_count }}</span>
+                        </div>
+                    </div>
+                    <span class="rank">{{ profile.rank }}</span>
+                </div>
+                {% elif profile.username == "DevOgabek" %}
+                <div class="rank-item me">
+                    <div class="profile-container">
+                        <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                        <div class="details">
+                            <span class="name">{{ profile.username }}</span>
+                            <span class="reputation">{{ profile.reputation_count }}</span>
+                        </div>
+                    </div>
+                    <span class="rank">{{ profile.rank }}</span>
+                </div>
+                <footer>
+                    <div class="rank-item me">
+                        <div class="profile-container">
+                            <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                            <div class="details">
+                                <span class="name">{{ profile.username }}</span>
+                                <span class="reputation">{{ profile.reputation_count }}</span>
+                            </div>
+                        </div>
+                        <span class="rank">{{ profile.rank }}</span>
+                    </div>
+                </footer>
+                {% else %}
+                <div class="rank-item">
+                    <div class="profile-container">
+                        <img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
+                        <div class="details">
+                            <span class="name">{{ profile.username }}</span>
+                            <span class="reputation">{{ profile.reputation_count }}</span>
+                        </div>
+                    </div>
+                    <span class="rank">{{ profile.rank }}</span>
+                </div>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
-									<div class="profile-container">
-										<img src="{{ profile.avatar_url }}" alt="Another Jane's Profile Image" class="profile-img" />
-										<div class="details">
-											<span class="name">{{ profile.username }}</span>
-											<span class="reputation">{{ profile.reputation_count }}</span>
-										</div>
-									</div>
-									<span class="rank">{{ profile.rank }}</span>
-								</div>
-
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</section>
-	</body>
+    </body>
 </html>
