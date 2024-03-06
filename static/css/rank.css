@@ -141,35 +141,45 @@
 footer {
     position: fixed;
     bottom: 0;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
+    width: 800px;
+
 }
 
 @media only screen and (max-width: 600px) {
 
-    .rank,
+
     .rank-th {
-        font-size: 1.2em;
+        font-size: 0.9em;
+        margin-left: 255px;
+    }
+
+    .rank {
+        font-size: 0.9em;
+        margin-left: 270px;
     }
 
     .name,
     .name-th {
-        font-size: 1em;
+        font-size: 0.8em;
     }
 
-    .reputation,
+
     .reputation-th {
         font-size: 0.8em;
-        margin-left: 520px;
+        margin-left: 180px;
+    }
+    .reputation {
+        font-size: 0.8em;
+        margin-left: 135px;
     }
 
     .profile-img {
         width: 40px;
         height: 40px;
     }
-
     footer {
-        max-width: 100%;
+        position: fixed;
+        bottom: 0;
+        width: 322.5px;
     }
 }
