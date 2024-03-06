@@ -5,6 +5,8 @@
     border-radius: 8px;
     overflow: hidden;
 }
+
+
 .rank-item-th {
     height: 20px;
     display: flex;
@@ -13,16 +15,20 @@
     padding: 15px;
     transition: background-color 0.3s;
 }
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
+
 
 .rank-item {
     display: flex;
@@ -38,25 +44,30 @@
     background-color: #eee;
 }
 
-.rank {
+
+.rank,
+.rank-th {
     font-size: 1.5em;
     font-weight: bold;
     color: #333;
-    margin-left: 730px;
     position: absolute;
 }
+
+.rank {
+    margin-left: 730px;
+}
+
 .rank-th {
     margin-top: 5px;
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #333;
     margin-left: 715px;
-    position: absolute;
 }
+
+
 .profile-container {
     display: flex;
     align-items: center;
 }
+
 .profile-img {
     width: 60px;
     height: 60px;
@@ -64,54 +75,101 @@
     margin-right: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .details {
     flex-grow: 1;
 }
-.name {
+
+
+.name,
+.name-th {
     font-size: 1.2em;
     color: #333;
     font-weight: bold;
-    margin-left: auto;
     position: absolute;
+}
+
+.name {
+    margin-left: auto;
     margin-top: -10px;
 }
-.reputation {
+
+.name-th {
+    margin-left: auto;
+    margin-top: -5px;
+}
+
+.reputation,
+.reputation-th {
     color: #666;
     position: absolute;
+}
+
+.reputation {
     margin-top: -5px;
     margin-left: 560px;
 }
+
 .reputation-th {
     margin-top: -5px;
-    color: #666;
-    position: absolute;
     margin-left: 620px;
 }
-.name-th {
-    font-size: 1.1em;
-    color: #333;
-    font-weight: bold;
-    margin-left: auto;
-    position: absolute;
-    margin-top: -5px;
-}
+
+
 .top-1 {
     background-color: #c0c0c0;
 }
+
 .top-2 {
     background-color: #d2d2d2;
 }
+
 .top-3 {
     background-color: #e8e8e8;
 }
+
+
 .th {
     height: 10px;
 }
+
 .me {
     background-color: rgb(203, 214, 236);
 }
+
+
 footer {
     position: fixed;
     bottom: 0;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .rank,
+    .rank-th {
+        font-size: 1.2em;
+    }
+
+    .name,
+    .name-th {
+        font-size: 1em;
+    }
+
+    .reputation,
+    .reputation-th {
+        font-size: 0.8em;
+        margin-left: 520px;
+    }
+
+    .profile-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        max-width: 100%;
+    }
 }
