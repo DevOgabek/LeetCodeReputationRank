@@ -1,0 +1,98 @@
+.ranking {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.rank-item-th {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    transition: background-color 0.3s;
+}
+.rank-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+.rank-item:hover {
+    background-color: #eee;
+}
+.rank {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-left: 730px;
+    position: absolute;
+}
+.rank-th {
+    margin-top: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-left: 715px;
+    position: absolute;
+}
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+.profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.details {
+    flex-grow: 1;
+}
+.name {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: bold;
+    margin-left: auto;
+    position: absolute;
+    margin-top: -10px;
+}
+.reputation {
+    color: #666;
+    position: absolute;
+    margin-top: -5px;
+    margin-left: 560px;
+}
+.reputation-th {
+    margin-top: -5px;
+    color: #666;
+    position: absolute;
+    margin-left: 620px;
+}
+.name-th {
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bold;
+    margin-left: auto;
+    position: absolute;
+    margin-top: -5px;
+}
+.top-1 {
+    background-color: #c0c0c0;
+}
+.top-2 {
+    background-color: #d2d2d2;
+}
+.top-3 {
+    background-color: #e8e8e8;
+}
+.th {
+    height: 10px;
+}
+.me {
+    background-color: rgb(203, 214, 236);
+}
